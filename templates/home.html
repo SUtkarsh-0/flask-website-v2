@@ -13,27 +13,34 @@
             height: 360px;
             object-fit: cover;
             width: 100%;
-
+            margin-bottom: 16px;
         }
     </style>
 </head>
 
 <body>
     {% include 'nav.html' %}
+    <img class="img-fluid" src="./static/banner.jpg" id="banner" height="320px">
+
     <div class="container">
         <h1 class="text-center mt-2 mb-4">Job Careers</h1>
-        <img class="img-fluid" src="./static/banner.jpg" id="banner" height="320px">
-        <h2 class="text-center mt-2 mb-4">About US</h2>
-        <p class="lead"> Lorem ipsum dolor sit amet consectetur adipisici
-            ng elit. Beatae animi quam, odit, cum asperiores
-            minima at, magni quis distinctio ut quo assumena
-            da ducimus fuga necessitatibus? Voluptatem, adip
-            sci dicta accusamus, fuga eaque aliquid nisi uta
-            netur culpa quisquam modi facere veritatis volup
-            um dignissimos distinctio minima deleniti unde d
-            es molestias voluptas explicabo. Sit nostrum vel
-            antium repellat aperiam eveniet veritatis, labor
-        </p>
+        <div class="row" style="margin-bottom: 16px;">
+            <div class="col-md-6">
+                <p class="lead"> Lorem ipsum dolor sit amet consectetur adipisici
+                    ng elit. Beatae animi quam, odit, cum asperiores
+                    minima at, magni quis distinctio ut quo assumena
+                    da ducimus fuga necessitatibus? Voluptatem, adip
+                    sci dicta accusamus, fuga eaque aliquid nisi uta
+                    netur culpa quisquam modi facere veritatis volup
+                    um dignissimos distinctio minima deleniti unde d
+                    es molestias voluptas explicabo. Sit nostrum vel
+                    antium repellat aperiam eveniet veritatis, labor
+                </p>
+            </div>
+            <div class="d-none d-md-block col-md-6">
+                <img src="/static/people.jpg" style="height:320px;border-radius: 4px;">
+            </div>
+        </div>
         <h2 class="text-center mt-2 mb-4">Open Positions</h2>
         <p>
             {% for job in jobs %}
@@ -42,10 +49,14 @@
 
         </p>
         <div class="text-center">
-            <button class="btn btn-primary btn-lg">Contact US</button>
+            <a class="btn btn-primary btn-lg"
+                href="mailto:2003013121@ipec.org.in?subject=Question%20About%20Job%20Openings%20&body=My%20name%3A%20%3CYour%20name%20here%3E%0D%0A%0D%0AMy%20Questin%3A%20%3CYour%20Question%20here%3E">Contact
+                US</a>
             <p class="mt-4">Copyright 2023</p>
         </div>
     </div>
+    {% include 'footer.html' %}
+
 </body>
 
 </html>
