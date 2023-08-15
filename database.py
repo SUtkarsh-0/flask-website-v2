@@ -16,8 +16,12 @@ def load_jobs_from_db():
         result = conn.execute(text("select * from jobs"))
         jobs = []
         for row in result.all():
-            jobs.append(dict(row))
+            jobs.append(row._tuple())
         return jobs
+
+
+
+
 
    
 
