@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Submitted</title>
+    {% include 'bootstrap.html' %}
+
+</head>
+
+<body>
+    {% include 'nav.html' %}
+    {% include 'banner2.html' %}
+
+    <div class="container">
+        <h1 class="text-center mt-2 mb-4">Submitted Form Details</h1>
+
+        <p>YOUR APPLICATION HAS BEEN SUBMITTED</p>
+
+        <b>Full Name</b>
+        <div class="mb-4">{{application['full_name']}}</div>
+
+        <b>Email</b>
+        <div class="mb-4">{{application['email']}}</div>
+
+        <b>Linkedin</b>
+        <div class="mb-4">{{application['linkedin_url']}}</div>
+
+        <b>Education</b>
+        <div class="mb-4">{{application['education']}}</div>
+
+        <b>Work experience</b>
+        <div class="mb-4">{{application['work_experience']}}</div>
+
+        <b>Resume</b>
+        <div class="mb-4">{{application['resume_url']}}</div>
+    </div>
+    {% include 'footer.html' %}
+
+</body>
+
+</html>
